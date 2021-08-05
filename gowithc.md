@@ -33,7 +33,7 @@ C语言封装，demo_c.h
 #ifdef __cplusplus
 extern "C" {
 #endif
-    void bar();
+    void hello();
 #ifdef __cplusplus
 }
 #endif
@@ -43,9 +43,9 @@ demo_c.c
 #include "demo.h"
 #include "demo_c.h"
 
-void bar() {
+void hello() {
     demo* demoObj = new demo();
-    demoObj->bar();
+    demoObj->hello();
 }
 ```
 然后进行编译，在当前代码的目录下，g++ -c demo.cpp，g++ -c demo_c.c，ar -crs libdemo.a demo.o demo_c.o
